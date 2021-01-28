@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置需要Spring容器管理的对象 -->
+    <bean id="person" class="com.lh.spring.bean.Person">  
+        <property name="pid" value="1001"></property>
+        <property name="pname" value="刘欢"></property>
+        <property name="age" value="20"></property>
+        <property name="addr" ref="address"></property>
+    </bean>
+    
+    <bean id="address" class="com.lh.spring.bean.Address">
+    	<property name="province" value="湖南省"></property>
+    	<property name="city" value="衡阳"></property>
+    	<property name="area" value="南岳区"></property>
+    </bean>
+
+</beans>
